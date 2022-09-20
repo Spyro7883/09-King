@@ -21,7 +21,7 @@ Copy the King.sol contract found before "submit instance" and "get new instance"
 At King.sol i made this next change:
 >- <value> 1. Pragma version from **0.6.0** to **0.7.6**
 
-This level asks us to glitch the King game by finding a way to stop the proclamation of a new king. We are going to do that by sending a value higher than the actual prize ( 0.001 eth or 1e15 wei) to the receive function, where the king.transfer(msg.value) is gonna fail because our AttackTheKing contract doesnt's allow receiving eth.
+This level asks us to glitch the King game by finding a way to stop the proclamation of a new king. We are going to do that by sending a value higher than the actual prize ( 0.001 eth or 1e15 wei) to the receive function, where the king.transfer(msg.value) is gonna fail because our AttackTheKing contract doesn't allow receiving eth.
 
 At the AttackTheKing contract add the constructor:
 >- <value> constructor(address payable addr) payable{
